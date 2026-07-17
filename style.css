@@ -368,8 +368,8 @@ body::after {
   }
 
   .image-panel {
-    flex: 0 0 40vh;
-    height: 40vh;
+    flex: 0 0 55vh;
+    height: 55vh;
     width: 100%;
     padding: 0;
   }
@@ -454,8 +454,8 @@ body::after {
   }
 
   .image-panel {
-    flex: 0 0 38vh;
-    height: 38vh;
+    flex: 0 0 60vh;
+    height: 60vh;
   }
 
   .content-panel {
@@ -517,8 +517,8 @@ body::after {
   }
 
   .image-panel {
-    flex: 0 0 35vh;
-    height: 35vh;
+    flex: 0 0 65vh;
+    height: 65vh;
   }
 
   .content-panel {
