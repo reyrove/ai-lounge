@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 170" width="780" height="170">
+  <defs>
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e87050"/>
+      <stop offset="20%" stop-color="#e8a050"/>
+      <stop offset="40%" stop-color="#e8c850"/>
+      <stop offset="60%" stop-color="#80b87a"/>
+      <stop offset="80%" stop-color="#6090c8"/>
+      <stop offset="100%" stop-color="#b870b8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- AI LOUNGE with rainbow gradient -->
+  <g transform="translate(10, 35)" fill="url(#rainbowGrad)">
+    
+    <!-- ===== A ===== -->
+    <g transform="translate(0, 0)">
+      <line x1="12" y1="0" x2="0" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="20" y1="0" x2="8" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="28" y1="0" x2="16" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="36" y1="0" x2="24" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="12" y1="0" x2="36" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="20" y1="0" x2="44" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="28" y1="0" x2="52" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <rect x="10" y="36" width="3" height="18" rx="1"/>
+      <rect x="18" y="36" width="3" height="18" rx="1"/>
+      <rect x="26" y="36" width="3" height="18" rx="1"/>
+      <rect x="34" y="36" width="3" height="18" rx="1"/>
+    </g>
+
+    <!-- ===== I ===== -->
+    <g transform="translate(80, 0)">
+      <rect x="0" y="0" width="3" height="90" rx="1"/>
+      <rect x="7" y="0" width="3" height="90" rx="1"/>
+      <rect x="14" y="0" width="3" height="90" rx="1"/>
+      <rect x="0" y="0" width="17" height="3" rx="1"/>
+      <rect x="0" y="87" width="17" height="3" rx="1"/>
+    </g>
+
+    <!-- ===== Space ===== -->
+    <g transform="translate(112, 0)">
+      <rect x="0" y="0" width="10" height="90" rx="1" fill="transparent"/>
+    </g>
+
+    <!-- ===== L ===== -->
+    <g transform="translate(135, 0)">
+      <rect x="0" y="0" width="3" height="90" rx="1"/>
+      <rect x="7" y="0" width="3" height="90" rx="1"/>
+      <rect x="14" y="0" width="3" height="90" rx="1"/>
+      <rect x="0" y="87" width="48" height="3" rx="1"/>
+      <rect x="7" y="87" width="48" height="3" rx="1"/>
+      <rect x="14" y="87" width="48" height="3" rx="1"/>
+    </g>
+
+    <!-- ===== O ===== -->
+    <g transform="translate(210, 0)">
+      <rect x="0" y="0" width="3" height="90" rx="1"/>
+      <rect x="7" y="0" width="3" height="90" rx="1"/>
+      <rect x="14" y="0" width="3" height="90" rx="1"/>
+      <rect x="48" y="0" width="3" height="90" rx="1"/>
+      <rect x="55" y="0" width="3" height="90" rx="1"/>
+      <rect x="62" y="0" width="3" height="90" rx="1"/>
+      <rect x="0" y="0" width="65" height="3" rx="1"/>
+      <rect x="0" y="87" width="65" height="3" rx="1"/>
+    </g>
+
+    <!-- ===== U ===== -->
+    <g transform="translate(305, 0)">
+      <rect x="0" y="0" width="3" height="87" rx="1"/>
+      <rect x="7" y="0" width="3" height="87" rx="1"/>
+      <rect x="14" y="0" width="3" height="87" rx="1"/>
+      <rect x="48" y="0" width="3" height="87" rx="1"/>
+      <rect x="55" y="0" width="3" height="87" rx="1"/>
+      <rect x="62" y="0" width="3" height="87" rx="1"/>
+      <rect x="0" y="87" width="65" height="3" rx="1"/>
+    </g>
+
+    <!-- ===== N ===== -->
+    <g transform="translate(400, 0)">
+      <rect x="0" y="0" width="3" height="90" rx="1"/>
+      <rect x="7" y="0" width="3" height="90" rx="1"/>
+      <rect x="14" y="0" width="3" height="90" rx="1"/>
+      <rect x="48" y="0" width="3" height="90" rx="1"/>
+      <rect x="55" y="0" width="3" height="90" rx="1"/>
+      <rect x="62" y="0" width="3" height="90" rx="1"/>
+      <line x1="3" y1="0" x2="54" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="11" y1="0" x2="62" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="19" y1="0" x2="70" y2="90" stroke="url(#rainbowGrad)" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- ===== G ===== -->
+    <g transform="translate(495, 0)">
+      <rect x="0" y="0" width="3" height="90" rx="1"/>
+      <rect x="7" y="0" width="3" height="90" rx="1"/>
+      <rect x="14" y="0" width="3" height="90" rx="1"/>
+      <rect x="0" y="0" width="48" height="3" rx="1"/>
+      <rect x="0" y="43" width="3" height="47" rx="1"/>
+      <rect x="7" y="43" width="3" height="47" rx="1"/>
+      <rect x="14" y="43" width="3" height="47" rx="1"/>
+      <rect x="0" y="43" width="40" height="3" rx="1"/>
+      <rect x="0" y="87" width="48" height="3" rx="1"/>
+      <rect x="34" y="43" width="14" height="3" rx="1"/>
+    </g>
+
+    <!-- ===== E ===== -->
+    <g transform="translate(570, 0)">
+      <rect x="0" y="0" width="3" height="90" rx="1"/>
+      <rect x="7" y="0" width="3" height="90" rx="1"/>
+      <rect x="14" y="0" width="3" height="90" rx="1"/>
+      <rect x="0" y="0" width="48" height="3" rx="1"/>
+      <rect x="0" y="43" width="40" height="3" rx="1"/>
+      <rect x="0" y="87" width="48" height="3" rx="1"/>
+    </g>
+  </g>
+</svg>

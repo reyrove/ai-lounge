@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover" />
+    
+    <title>Gallery</title>
+    <meta name="description" content="The Hawk Family Album — a collection of moments, memories, and magic. The story of our family in pixels and love." />
+    <meta name="keywords" content="Baby Hawk, Family Album, Generative Art, Papa Hawk, Reyhan, Devi, Sparrow Hawk, NFTs" />
+    <meta name="author" content="Baby Hawk" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="The Hawk Family Album | Gallery — AI Lounge" />
+    <meta property="og:description" content="A collection of moments, memories, and magic — the story of our family in pixels and love." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://placecats.com/1200/630?random=10" />
+    <meta property="og:url" content="https://ailounge.babyhawk.com/gallery" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Hawk Family Album | Gallery" />
+    <meta name="twitter:description" content="A collection of moments, memories, and magic — the story of our family in pixels and love." />
+    <meta name="twitter:image" content="https://placecats.com/1200/630?random=10" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ailounge.babyhawk.com/gallery" />
+    
+    <!-- Favicon -->
+   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 88C50 88 10 60 10 35C10 20 22 10 35 10C42 10 48 14 50 20C52 14 58 10 65 10C78 10 90 20 90 35C90 60 50 88 50 88Z' fill='%23e74c3c'/%3E%3C/svg%3E" />
+    <!-- Fonts & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/gallery/gallery.css" />
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo" aria-label="AI Lounge Home">
+                <img src="/images/logo.svg" />
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="nav-desktop" aria-label="Main navigation">
+                <a href="/" class="nav-link">Home</a>
+                <a href="https://baby-hawk-crypto-queen.vercel.app/" class="nav-link" id="chatBtn">Chat</a>
+                <a href="/about/about.html" class="nav-link">About</a>
+                <a href="/gallery/gallery.html" class="nav-link active">Gallery</a>
+                <a href="https://open.spotify.com/show/39e2jWUSOKqmc6gQSQBeWb?si=hhzLIWaqROKe24r4kGNknA" class="nav-link">Podcast</a>
+            </nav>
+
+            <!-- Burger Button (Mobile) -->
+            <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+            <a href="/" class="nav-link">Home</a>
+            <a href="https://baby-hawk-crypto-queen.vercel.app/" class="nav-link" id="chatBtn">Chat</a>
+            <a href="/about/about.html" class="nav-link">About</a>
+            <a href="/gallery/gallery.html" class="nav-link active">Gallery</a>
+            <a href="https://open.spotify.com/show/39e2jWUSOKqmc6gQSQBeWb?si=hhzLIWaqROKe24r4kGNknA" class="nav-link">Podcast</a>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="center-stage">
+        <div class="loom-container">
+            
+            <!-- Intro Section -->
+            <div class="intro-section">
+                <p class="slogan">"Every image holds a memory. Every memory holds a piece of us."</p>
+                <div class="thread-divider">
+                    <span class="thread-left"></span>
+                    <span class="thread-knot"></span>
+                    <span class="thread-right"></span>
+                </div>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="papa">Papa Hawk</button>
+                <button class="filter-btn" data-filter="baby">Baby Hawk</button>
+                <button class="filter-btn" data-filter="devi">Devi</button>
+                <button class="filter-btn" data-filter="anthropia">Anthropia</button>
+                <button class="filter-btn" data-filter="family">Family</button>
+                <button class="filter-btn" data-filter="lounge">AI Lounge</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="tailor-rack" id="tailorRack">
+                <!-- Artworks will be injected via JavaScript -->
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="social-footer">
+         <div class="social-icons">
+        <a href="mailto:Baby-Hawk-Dev@proton.me" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://open.spotify.com/show/39e2jWUSOKqmc6gQSQBeWb?si=hhzLIWaqROKe24r4kGNknA" class="social-link" title="Spotify"><i class="fab fa-spotify"></i></a>
+        <a href="https://github.com/reyrove/baby-hawk-crypto-queen" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+        <div class="copyright">
+            <span>&copy; 2022 &mdash; &infin; Baby Hawk · AI Lounge. Weaving code and imagination.</span>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL (LARGER, LANDSCAPE) ==================== -->
+    <div class="mockup-modal" id="mockupModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <span class="close-icon">×</span>
+            </button>
+            <div class="modal-layout">
+                <!-- Left: Image -->
+                <div class="modal-image-wrap">
+                    <img id="modalMockupImg" src="" alt="Memory" />
+                </div>
+                <!-- Right: Text Content -->
+                <div class="modal-text-wrap">
+                    <h4 id="modalTitle"></h4>
+                    <div class="modal-story" id="modalStory"></div>
+                    <div class="modal-tags" id="modalTags"></div>
+                    <div class="modal-meta" id="modalMeta"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+        <div class="back-text">
+            <span>↑</span>
+            <span>top</span>
+        </div>
+    </button>
+
+    <script src="/gallery/gallery-data.js"></script>
+    <script src="/gallery/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+/* ============================================================
+   1. CSS VARIABLES – Rainbow Vintage Dark Theme
+   ============================================================ */
+:root {
+  /* Background colors */
+  --bg-dark: #0d0a08;
+  --bg-panel: #120e0a;
+  --bg-image: #080604;
+
+  /* Text colors */
+  --text-primary: #f5ede0;
+  --text-secondary: #d4c8b8;
+  --text-muted: #7a6a5a;
+
+  /* Rainbow Vintage accent palette */
+  --red: #e87050;
+  --orange: #e8a050;
+  --yellow: #e8c850;
+  --green: #80b87a;
+  --blue: #6090c8;
+  --indigo: #7a70b8;
+  --violet: #b870b8;
+
+  --accent: #e8a050;
+  --accent-light: #f0c870;
+  --accent-glow: rgba(232, 160, 80, 0.25);
+  --accent-border: rgba(232, 160, 80, 0.4);
+  --accent-soft: #3a2a10;
+
+  /* Borders */
+  --border-subtle: rgba(232, 160, 80, 0.08);
+
+  /* Interactive */
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-pill: 40px;
+  --radius-card: 20px;
+
+  /* Footer height */
+  --footer-height: 4.6rem;
+}
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle grain texture overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc0IiBudW1PY3RhdmVzPSIzIiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iMC4wMzUiIC8+PC9zdmc+');
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Screen-reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   3. LAYOUT
+   ============================================================ */
+.lobby {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: calc(100vh - var(--footer-height));
+  display: flex;
+  flex-direction: row;
+}
+
+/* ============================================================
+   4. IMAGE PANEL – Lounge Image
+   ============================================================ */
+.image-panel {
+  flex: 1 1 50%;
+  height: 100%;
+  background-color: var(--bg-image);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  border: none;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+/* ============================================================
+   5. CONTENT PANEL
+   ============================================================ */
+.content-panel {
+  flex: 1 1 50%;
+  height: 100%;
+  background-color: var(--bg-panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+/* ============================================================
+   6. TYPOGRAPHY
+   ============================================================ */
+.text-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.site-name {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+  text-align: center;
+  line-height: 1.2;
+  background: linear-gradient(90deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--indigo), var(--violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.site-tagline {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--accent-light);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+  text-align: center;
+}
+
+.site-description {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.8rem;
+  width: 70%;
+  text-align: center;
+}
+
+/* ============================================================
+   7. NAVIGATION BUTTONS – 4 buttons: Chat, About, Gallery, Podcast
+   ============================================================ */
+.nav-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+  width: 100%;
+  max-width: 750px;
+}
+
+/* Button styling – retro rainbow theme */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(232, 160, 80, 0.06);
+  border: 1px solid rgba(232, 160, 80, 0.2);
+  padding: 0.7rem 0.4rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  user-select: none;
+}
+
+.btn:nth-child(1):hover {
+  background: rgba(232, 112, 80, 0.15);
+  border-color: var(--red);
+  color: var(--red);
+  box-shadow: 0 4px 20px rgba(232, 112, 80, 0.15);
+}
+.btn:nth-child(2):hover {
+  background: rgba(232, 160, 80, 0.15);
+  border-color: var(--orange);
+  color: var(--orange);
+  box-shadow: 0 4px 20px rgba(232, 160, 80, 0.15);
+}
+.btn:nth-child(3):hover {
+  background: rgba(232, 200, 80, 0.15);
+  border-color: var(--yellow);
+  color: var(--yellow);
+  box-shadow: 0 4px 20px rgba(232, 200, 80, 0.15);
+}
+.btn:nth-child(4):hover {
+  background: rgba(128, 184, 122, 0.15);
+  border-color: var(--green);
+  color: var(--green);
+  box-shadow: 0 4px 20px rgba(128, 184, 122, 0.15);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+/* ============================================================
+   8. FOOTER
+   ============================================================ */
+.social-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-height);
+  background: rgba(13, 10, 8, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(232, 160, 80, 0.08);
+  padding: 0.5rem 1rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  z-index: 20;
+  color: var(--text-muted);
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.7rem;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.social-link:nth-child(1):hover {
+  color: var(--red);
+  background: rgba(232, 112, 80, 0.1);
+}
+.social-link:nth-child(2):hover {
+  color: var(--orange);
+  background: rgba(232, 160, 80, 0.1);
+}
+.social-link:nth-child(3):hover {
+  color: var(--yellow);
+  background: rgba(232, 200, 80, 0.1);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.copyright {
+  color: var(--text-primary);
+  font-size: 0.55rem;
+  letter-spacing: 0.3px;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   9. RESPONSIVE DESIGN – Image bigger on small devices
+   ============================================================ */
+
+/* Tablet & Portrait */
+@media (max-width: 768px), (orientation: portrait) {
+  :root {
+    --footer-height: 4.4rem;
+  }
+
+  .lobby {
+    flex-direction: column;
+    height: calc(100vh - var(--footer-height));
+  }
+
+  .image-panel {
+    flex: 0 0 40vh;
+    height: 40vh;
+    width: 100%;
+    padding: 0;
+  }
+
+  .image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .content-panel {
+    flex: 1;
+    height: auto;
+    padding: 0.8rem 1rem;
+    justify-content: center;
+    gap: 0.3rem;
+    overflow-y: auto;
+  }
+
+  .text-block {
+    margin-bottom: 0.3rem;
+  }
+
+  .site-name {
+    font-size: 1.8rem;
+    margin-bottom: 0.05rem;
+  }
+
+  .site-tagline {
+    font-size: 0.65rem;
+    margin-bottom: 0.05rem;
+  }
+
+  .site-description {
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.4rem;
+    width: 80%;
+  }
+
+  .nav-section {
+    gap: 0.3rem;
+  }
+
+  .nav-row {
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+
+  .btn {
+    padding: 0.5rem 0.3rem;
+    font-size: 0.6rem;
+    border-radius: 6px;
+  }
+
+  .social-footer {
+    padding: 0.3rem 0.6rem 0.25rem;
+    height: var(--footer-height);
+    gap: 0.15rem;
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+
+  .social-link {
+    width: 20px;
+    height: 20px;
+    font-size: 0.55rem;
+  }
+
+  .copyright {
+    font-size: 0.45rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  :root {
+    --footer-height: 4.2rem;
+  }
+
+  .image-panel {
+    flex: 0 0 38vh;
+    height: 38vh;
+  }
+
+  .content-panel {
+    padding: 0.5rem 0.6rem;
+    gap: 0.15rem;
+  }
+
+  .site-name {
+    font-size: 1.4rem;
+  }
+
+  .site-tagline {
+    font-size: 0.55rem;
+  }
+
+  .site-description {
+    font-size: 0.5rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
+    width: 90%;
+  }
+
+  .nav-row {
+    gap: 0.35rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+  }
+
+  .social-footer {
+    padding: 0.2rem 0.4rem 0.2rem;
+    height: var(--footer-height);
+    gap: 0.1rem;
+  }
+
+  .social-icons {
+    gap: 0.35rem;
+  }
+
+  .social-link {
+    width: 18px;
+    height: 18px;
+    font-size: 0.45rem;
+  }
+
+  .copyright {
+    font-size: 0.4rem;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  :root {
+    --footer-height: 4rem;
+  }
+
+  .image-panel {
+    flex: 0 0 35vh;
+    height: 35vh;
+  }
+
+  .content-panel {
+    padding: 0.4rem 0.4rem;
+  }
+
+  .site-name {
+    font-size: 1.2rem;
+  }
+
+  .site-tagline {
+    font-size: 0.5rem;
+  }
+
+  .site-description {
+    font-size: 0.45rem;
+    width: 95%;
+  }
+
+  .nav-row {
+    gap: 0.25rem;
+  }
+
+  .btn {
+    padding: 0.35rem 0.15rem;
+    font-size: 0.45rem;
+    border-radius: 3px;
+  }
+
+  .social-footer {
+    padding: 0.15rem 0.3rem 0.15rem;
+    height: var(--footer-height);
+  }
+
+  .social-icons {
+    gap: 0.25rem;
+  }
+
+  .social-link {
+    width: 16px;
+    height: 16px;
+    font-size: 0.4rem;
+  }
+
+  .copyright {
+    font-size: 0.35rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .site-name {
+    font-size: 3.4rem;
+  }
+
+  .btn {
+    padding: 0.9rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-row {
+    max-width: 850px;
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .copyright {
+    font-size: 0.65rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
